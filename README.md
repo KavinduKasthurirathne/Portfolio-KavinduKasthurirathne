@@ -5,10 +5,6 @@
 
 Professional portfolio website showcasing projects, skills, certifications, and professional experience in Data Science and Software Development.
 
-![Portfolio Preview](images/About.png)
-![Portfolio Preview](images/Projects.png)
-![Portfolio Preview](images/Certificates.png)
-
 ## Features
 
 - Responsive Design
