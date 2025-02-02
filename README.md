@@ -1,5 +1,5 @@
 ## Kavindu Kasthurirathne
-## BSc (Hons) in Information Technology specialized in Data Science
+### BSc (Hons) in Information Technology specialized in Data Science
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/KavinduKasthurirathne/portfolio/blob/main/LICENSE)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)]([https://your-portfolio-link.com](https://kavindukasthurirathne.github.io/Portfolio-KavinduKasthurirathne/))
