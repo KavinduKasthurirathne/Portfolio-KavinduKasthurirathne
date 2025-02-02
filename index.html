@@ -1,690 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Section</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<style>
-  .about-section {
-    text-align: center;
-    padding: 50px 0;
-  }
-  .about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .about-section img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-bottom: 20px;
-  }
-  .about-section p {
-    color: #333;
-  }
-
-  /* Additional CSS for Projects Section */
-.projects-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
-}
-.card-img-top {
-  max-height: 180px; /* Adjust this value to fit the image properly in the card */
-  object-fit: cover; /* This makes sure the image covers the area properly */
-}
-.card-body {
-  padding: 15px;
-}
-.card-title {
-  font-size: 1.25rem;
-}
-.card-text {
-  margin-bottom: 15px;
-}
-
-/* Additional CSS for Skills Section */
-.skills-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.skills-section .card {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.skills-section .card-img-top {
-  padding: 20px; /* Add padding around your images if needed */
-  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-  height: 180px; /* Fixed height for consistency */
-  object-fit: contain; /* This will make sure the image is scaled properly within the container */
-}
-.skills-section .card-body {
-  padding: 15px;
-}
-.skills-section .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-}
-.skills-section .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
-}
-.skills-section .btn-outline-primary:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-/* Additional CSS for Contact Section */
-.contact-section {
-  padding: 50px 0;
-}
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-.contact-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.social-icon {
-  width: 50px; /* Size of your icons */
-  margin-bottom: 10px;
-}
-/* Hover effect for icons */
-.social-icon:hover {
-  opacity: 0.7;
-}
-/* Style for links in the Contact section */
-.contact-section a {
-  color: #fff;
-  text-decoration: none; /* Removes underline from links */
-  display: inline-block; /* Allows for margin on the bottom */
-  margin-bottom: 10px;
-}
-.contact-section a:hover {
-  color: #ddd; /* Color when hovering over the link */
-}
-
-/* CSS for Sticky Navbar */
-.navbar {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-}
-
-/* Ensure padding is added to body to avoid content being hidden behind the navbar */
-body { 
-  padding-top: 56px; /* Adjust this value based on the height of your navbar */
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Style for navigation bar links */
-.navbar-nav .nav-link {
-  color: white;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Slightly lighter white when hovering over links */
-}
-
-/* Media query for responsive navbar collapsing */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background-color: #343a40; /* Same as navbar color for seamless look */
-  }
-}
-
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavindu Kasthurirathne - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<section id='about' class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-    <img src="images/about/image.PNG" alt="About Me">
-    <h4>Kavindu Kasthurirathne</h4>
-    <h5>BSc (Hons) in Information Technology specialized in Data Science</h5>
-    <p>As a passionate Data Science graduate, I thrive at the intersection of data, technology, and innovation. Armed with expertise in Python, machine learning, and data analytics, I have developed impactful solutions across diverse projects, from building real-time quality monitoring systems for the apparel industry to designing recommendation engines. My experience spans data engineering, visualization, and research, all driven by my commitment to turning raw data into actionable insights that drive success. Collaborating with dynamic teams, I’ve honed my skills in problem-solving, leadership, and delivering results that matter.</p>
-    <p>Beyond my technical endeavors, I’m a creative thinker and an avid learner, continually expanding my skill set to stay ahead in this fast-evolving field. I find joy in exploring new challenges, whether it’s developing IoT solutions, tackling complex datasets, or crafting machine learning models. Through my portfolio, I aim to share my journey, showcase my expertise, and inspire others to embrace the endless possibilities of data science.</p>
-  </div>
-</section>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
 
-
-<!-- Projects Section -->
-<section id="projects" class="projects-section bg-light" id="projects">
-  <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row">
-      <!-- Project 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/RP.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Real-time Quality Monitoring System for the Apparel Industry</h5>
-            <p class="card-text" align="justify">
-              Developed “SeamSense” in collaboration with MAS Linea Aqua, leveraging YOLO models within a fog-cloud architecture for real-time detection of seam defects. The system enhances production quality and reduces rework costs by providing continuous, efficient monitoring of garment quality.
-            </p>
-            <a href="https://www.linkedin.com/posts/kavindu-kasthurirathne_datascience-machinelearning-qualitymonitoring-activity-7258998892455682048-H6zj?utm_source=share&utm_medium=member_desktop" class="btn btn-secondary">Blog Post</a>
-            <a href="https://r24-researchproject.github.io/SeamSense-Website/" class="btn btn-primary">View Website</a>
-          </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Kavindu Kasthurirathne</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/vaued.jpeg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Visual Analytics & UX Design Project: REST Service with Prometheus and Grafana Integration</h5>
-            <p class="card-text" align="justify">
-              Developed a Spring Boot REST service with integrated Prometheus and Grafana for metrics collection and visualization. Enabled real-time observability and data insights through effective dashboarding and alerting mechanisms.
-            </p>
-            <a href="https://github.com/KavinduKasthurirathne/VAUED.git" class="btn btn-secondary">Source Code</a>
-            <a href="https://drive.google.com/file/d/1D_NA_or15mpld6B0VScKAuVZ941Hgrgo/view?usp=sharing" class="btn btn-primary">View Demo</a>
-          </div>
-        </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/iot.webp" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">IoT Project: Temperature & Humidity Monitoring System</h5>
-            <p class="card-text"align="justify">
-              Designed and deployed a fully responsive Node-RED dashboard for real-time and historical sensor data visualization. The system provides homeowners with instant access to temperature and humidity readings while integrating predictive insights for improved monitoring and decision-making.
-            </p>
-            <a href="https://github.com/KavinduKasthurirathne/ThermoSense_Temperature-Humidity-Monitoring-System.git" class="btn btn-secondary">Source Code</a>
-            <a href="https://drive.google.com/file/d/1KG6Pudqh9XBghTheWuf7TBAWfUaLuMjt/view?usp=sharing" class="btn btn-primary">View Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-      
+    </nav>
 
-    <div class="row">
-      <!-- Project 4 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/resume.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">AI Resume Matching, Analysis, and Chat</h5>
-            <p class="card-text" align="justify">
-              A web application built with Streamlit that matches resumes with job descriptions using text similarity, extracts key details like skills and experience, and enables interactive chat with resumes through AI-powered analysis for deeper insights.
-            </p>
-            <a href="https://github.com/KavinduKasthurirathne/AI-Resume-Matching" class="btn btn-secondary">Source Code</a>
-            <a href="https://kavindukasthurirathne-ai-resume-matching-app-qiispp.streamlit.app/" class="btn btn-primary">View Website</a>
-          </div>
+    <!-- Sections -->
+    <section id='about' class="about-section">
+        <div class="container">
+            <h2>About Me</h2><br>
+            <img src="images/about/image.PNG" alt="About Me">
+            <h4>Kavindu Kasthurirathne</h4>
+            <h5>BSc (Hons) in Information Technology specialized in Data Science</h5>
+            <p align="justify">As a passionate Data Science graduate, I thrive at the intersection of data, technology,
+                and innovation. Armed with expertise in Python, machine learning, and data analytics, I have developed
+                impactful solutions across diverse projects, from building real-time quality monitoring systems for the
+                apparel industry to designing recommendation engines. My experience spans data engineering,
+                visualization, and research, all driven by my commitment to turning raw data into actionable insights
+                that drive success. Collaborating with dynamic teams, I’ve honed my skills in problem-solving,
+                leadership, and delivering results that matter.</p>
+            <p align="justify">Beyond my technical endeavors, I’m a creative thinker and an avid learner, continually
+                expanding my skill set to stay ahead in this fast-evolving field. I find joy in exploring new
+                challenges, whether it’s developing IoT solutions, tackling complex datasets, or crafting machine
+                learning models. Through my portfolio, I aim to share my journey, showcase my expertise, and inspire
+                others to embrace the endless possibilities of data science.</p>
         </div>
-      </div>
-    
-      <!-- Project 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/loaan.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Fundamentals of Data Mining: Loan Approval Prediction</h5>
-            <p class="card-text" align="justify">
-              Developed a predictive model for loan approval decisions based on applicant attributes, showcasing skills in machine learning, data preprocessing, and statistical analysis to support financial decision-making.
-            </p>
-            <a href="https://github.com/KavinduKasthurirathne/Loan-Approval-Prediction-Model.git" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
+    </section>
 
-      <!-- Project 6 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/movie.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Personalized Movie Recommendation Engine</h5>
-            <p class="card-text" align="justify">
-              Developed and deployed a recommendation engine using content-based and collaborative filtering to deliver personalized movie suggestions, showcasing advanced data processing and recommendation techniques.
-            </p>
-              <a href="https://github.com/KavinduKasthurirathne/Movie-Recommendation-Model.git" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <!-- Project 7 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/spam.png" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Spam Email Classification</h5>
-            <p class="card-text"align="justify">
-              A web application that uses machine learning to classify emails as Spam or Ham. Built with Logistic Regression and TF-IDF vectorization, it preprocesses email content for accurate detection and is easily deployable with Streamlit or Flask.
-            </p>
-            <a href="https://github.com/KavinduKasthurirathne/ThermoSense_Temperature-Humidity-Monitoring-System.git" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 8 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/music.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Music Recommender System</h5>
-            <p class="card-text" align="justify">
-              A web application built with Streamlit and Spotipy that uses content-based filtering and TF-IDF to recommend five similar songs based on a selected track, complete with album covers for an interactive user experience.
-            </p>
-            <a href="https://github.com/KavinduKasthurirathne/Loan-Approval-Prediction-Model.git" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 9 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/bird.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Bird Call Identification</h5>
-            <p class="card-text" align="justify">
-              A deep learning project that classifies audio recordings of Brown Tinamou, Great Tinamou, and Cinereous Tinamou using spectrograms, MFCCs, and a CNN model to support biodiversity monitoring and conservation.
-            </p>
-              <a href="https://github.com/KavinduKasthurirathne/Bird-Species-Identification.git" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <!-- Project 10 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/dwbi.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Data Warehouse & Business Intelligence Project</h5>
-            <p class="card-text" align="justify">
-              Designed a data warehouse schema and ETL pipeline, loading OLTP data into the warehouse for analysis and visualization in Power BI. Improved data accessibility and reporting for business insights, leveraging SSIS, SSAS, and SSRS.
-            </p>
-            <a href="#" class="btn btn-secondary">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 11 -->
-      <!-- <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/vaued.jpeg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Visual Analytics & UX Design Project: REST Service with Prometheus and Grafana Integration</h5>
-            <p class="card-text" align="justify">
-              Developed a Spring Boot REST service with integrated Prometheus and Grafana for metrics collection and visualization. Enabled real-time observability and data insights through effective dashboarding and alerting mechanisms.
-            </p>
-            <a href="https://github.com/KavinduKasthurirathne/VAUED.git" class="btn btn-secondary">Source Code</a>
-            <a href="https://drive.google.com/file/d/1D_NA_or15mpld6B0VScKAuVZ941Hgrgo/view?usp=sharing" class="btn btn-primary">View Demo</a>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Project 12
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/projects/iot.webp" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">IoT Project: Temperature & Humidity Monitoring System</h5>
-            <p class="card-text"align="justify">A Node-RED dashboard to visualize past and current sensor data, with 100% responsiveness, allowing homeowners 
-              instant access to temperature and humidity readings. 
-              This project improved the monitoring experience by integrating real-time data and predictive insights.</p>
-            <a href="https://github.com/KavinduKasthurirathne/ThermoSense_Temperature-Humidity-Monitoring-System.git" class="btn btn-secondary">Source Code</a>
-            <a href="https://drive.google.com/file/d/1KG6Pudqh9XBghTheWuf7TBAWfUaLuMjt/view?usp=sharing" class="btn btn-primary">View Demo</a>
-          </div>
-        </div>
-      </div> -->
-    </div>
-
-  </div>
-</section>
+    <section id="projects" class="projects-section bg-light">
+        <div class="container">
+            <h2 class="text-center">Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/RP.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Real-time Quality Monitoring System for the Apparel Industry</h5>
+                            <p class="card-text" align="justify">
+                                Developed “SeamSense” in collaboration with MAS Linea Aqua, leveraging YOLO models
+                                within a fog-cloud architecture for real-time detection of seam defects. The system
+                                enhances production quality and reduces rework costs by providing continuous, efficient
+                                monitoring of garment quality.
+                            </p>
+                            <a href="https://www.linkedin.com/posts/kavindu-kasthurirathne_datascience-machinelearning-qualitymonitoring-activity-7258998892455682048-H6zj?utm_source=share&utm_medium=member_desktop"
+                                class="btn btn-secondary">Blog Post</a>
+                            <a href="https://r24-researchproject.github.io/SeamSense-Website/"
+                                class="btn btn-primary">View Website</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/vaued.jpeg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Visual Analytics & UX Design Project: REST Service with Prometheus
+                                and Grafana Integration</h5>
+                            <p class="card-text" align="justify">
+                                Developed a Spring Boot REST service with integrated Prometheus and Grafana for metrics
+                                collection and visualization. Enabled real-time observability and data insights through
+                                effective dashboarding and alerting mechanisms.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/VAUED.git"
+                                class="btn btn-secondary">Source Code</a>
+                            <a href="https://drive.google.com/file/d/1D_NA_or15mpld6B0VScKAuVZ941Hgrgo/view?usp=sharing"
+                                class="btn btn-primary">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/iot.webp" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">IoT Project: Temperature & Humidity Monitoring System</h5>
+                            <p class="card-text" align="justify">
+                                Designed and deployed a fully responsive Node-RED dashboard for real-time and historical
+                                sensor data visualization. The system provides homeowners with instant access to
+                                temperature and humidity readings while integrating predictive insights for improved
+                                monitoring and decision-making.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/ThermoSense_Temperature-Humidity-Monitoring-System.git"
+                                class="btn btn-secondary">Source Code</a>
+                            <a href="https://drive.google.com/file/d/1KG6Pudqh9XBghTheWuf7TBAWfUaLuMjt/view?usp=sharing"
+                                class="btn btn-primary">View Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+            <div class="row">
+                <!-- Project 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/resume.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Resume Matching, Analysis, and Chat</h5>
+                            <p class="card-text" align="justify">
+                                A web application built with Streamlit that matches resumes with job descriptions using
+                                text similarity, extracts key details like skills and experience, and enables
+                                interactive chat with resumes through AI-powered analysis for deeper insights.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/AI-Resume-Matching"
+                                class="btn btn-secondary">Source Code</a>
+                            <a href="https://kavindukasthurirathne-ai-resume-matching-app-qiispp.streamlit.app/"
+                                class="btn btn-primary">View Website</a>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Certificates Section -->
-<section id="certificates" class="projects-section bg-light" id="projects">
-  <div class="container">
-    <h2 class="text-center">Certificates & Licenses</h2>
+                <!-- Project 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/loaan.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Fundamentals of Data Mining: Loan Approval Prediction</h5>
+                            <p class="card-text" align="justify">
+                                Developed a predictive model for loan approval decisions based on applicant attributes,
+                                showcasing skills in machine learning, data preprocessing, and statistical analysis to
+                                support financial decision-making.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/Loan-Approval-Prediction-Model.git"
+                                class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="row">
-      <!-- Certificate 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/hnd.jpeg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Higher Diploma in Information Technology</h5>
-            <p class="card-text" align="justify">
-              Sri Lanka Institute of Information Technology
-            </p>
-            <a href="#" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/python_for_ds.jpeg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Python for Data Science, AI & Development</h5>
-            <p class="card-text" align="justify">
-              Coursera (IBM)
-            </p>
-            <a href="https://www.coursera.org/account/accomplishments/records/7PITOKRGJAE9" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/sql_for_ds.jpeg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Databases and SQL for Data Science with Python</h5>
-            <p class="card-text" align="justify">
-              Coursera (IBM)
-            </p>
-            <a href="https://www.coursera.org/account/accomplishments/verify/XTUXRMNSX0SB" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <!-- Certificate 4 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/slasscom.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Data Science and Machine Learning - Bootcamp</h5>
-            <p class="card-text" align="justify">
-              SLASSCOM Academy
-            </p>
-            <a href="https://mycourse.app/7UvPze7LLfK17F8t5" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/datathon.jpeg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Datathon Contest - CODEFEST 2023 (2nd Runner-Up)</h5>
-            <p class="card-text" align="justify">
-              Sri Lanka Institute of Information Technology
-            </p>
-            <a href="#" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 6 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/DigiM.jpeg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Fundamentals in Digital Marketing</h5>
-            <p class="card-text" align="justify">
-              Asia Pacific Institute of Digital Marketing (APIDM)
-            </p>
-            <a href="#" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <!-- Certificate 7 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/aiml1.jpg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">AI/ML Engineer - Stage 1</h5>
-            <p class="card-text" align="justify">
-              Sri Lanka Institute of Information Technology
-            </p>
-            <a href="https://code.sliit.org/certificates/u6i1kb5ngk" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 8 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/aiml2.jpg" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">AI/ML Engineer - Stage 2</h5>
-            <p class="card-text" align="justify">
-              Sri Lanka Institute of Information Technology
-            </p>
-            <a href="https://code.sliit.org/certificates/cmkakda9cs" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 9 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/hacerrank.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Skill Certificate - Python (Basic)</h5>
-            <p class="card-text" align="justify">
-              HackerRank
-            </p>
-            <a href="https://www.hackerrank.com/certificates/e028f3865d91" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-    </div>
+                <!-- Project 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/movie.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Personalized Movie Recommendation Engine</h5>
+                            <p class="card-text" align="justify">
+                                Developed and deployed a recommendation engine using content-based and collaborative
+                                filtering to deliver personalized movie suggestions, showcasing advanced data processing
+                                and recommendation techniques.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/Movie-Recommendation-Model.git"
+                                class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-    <div class="row">
-      <!-- Certificate 10 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/uom.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Python Programming - CODL</h5>
-            <p class="card-text" align="justify">
-              University of Moratuwa<br>
-              Credential ID: Wy20zjaa5Z
-            </p>
-            <a href="https://open.uom.lk/verify" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 11 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/google1.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Badge for 'Introduction to Generative AI'</h5>
-            <p class="card-text" align="justify">
-              Google Cloud Skills Boost
-            </p>
-            <a href="https://www.cloudskillsboost.google/public_profiles/2f32922b-171b-4833-b3e4-05f0f525b0ba/badges/9484060?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-      <!-- Certificate 12 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/certificates/google2.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Badge of Completing 'Introduction to Large Language Models'</h5>
-            <p class="card-text" align="justify">
-              Google Cloud Skills Boost
-            </p>
-            <a href="https://www.cloudskillsboost.google/public_profiles/2f32922b-171b-4833-b3e4-05f0f525b0ba/badges/9484526?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" class="btn btn-secondary">View Certificate</a>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="row">
+                <!-- Project 7 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/spam.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Spam Email Classification</h5>
+                            <p class="card-text" align="justify">
+                                A web application that uses machine learning to classify emails as Spam or Ham. Built
+                                with Logistic Regression and TF-IDF vectorization, it preprocesses email content for
+                                accurate detection and is easily deployable with Streamlit or Flask.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/ThermoSense_Temperature-Humidity-Monitoring-System.git"
+                                class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
 
-  </div>
-</section>
+                <!-- Project 8 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/music.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Music Recommender System</h5>
+                            <p class="card-text" align="justify">
+                                A web application built with Streamlit and Spotipy that uses content-based filtering and
+                                TF-IDF to recommend five similar songs based on a selected track, complete with album
+                                covers for an interactive user experience.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/Loan-Approval-Prediction-Model.git"
+                                class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/bird.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Bird Call Identification</h5>
+                            <p class="card-text" align="justify">
+                                A deep learning project that classifies audio recordings of Brown Tinamou, Great
+                                Tinamou, and Cinereous Tinamou using spectrograms, MFCCs, and a CNN model to support
+                                biodiversity monitoring and conservation.
+                            </p>
+                            <a href="https://github.com/KavinduKasthurirathne/Bird-Species-Identification.git"
+                                class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Project 10 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/projects/dwbi.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Warehouse & Business Intelligence Project</h5>
+                            <p class="card-text" align="justify">
+                                Designed a data warehouse schema and ETL pipeline, loading OLTP data into the warehouse
+                                for analysis and visualization in Power BI. Improved data accessibility and reporting
+                                for business insights, leveraging SSIS, SSAS, and SSRS.
+                            </p>
+                            <a href="#" class="btn btn-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates-section bg-white">
+        <div class="container">
+            <h2 class="text-center">Certificates & Licenses</h2>
+
+            <div class="row">
+                <!-- Certificate 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/hnd.jpeg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Higher Diploma in Information Technology</h5>
+                            <p class="card-text" align="justify">
+                                Sri Lanka Institute of Information Technology
+                            </p>
+                            <a href="#" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/python_for_ds.jpeg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Python for Data Science, AI & Development</h5>
+                            <p class="card-text" align="justify">
+                                Coursera (IBM)
+                            </p>
+                            <a href="https://www.coursera.org/account/accomplishments/records/7PITOKRGJAE9"
+                                class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/sql_for_ds.jpeg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Databases and SQL for Data Science with Python</h5>
+                            <p class="card-text" align="justify">
+                                Coursera (IBM)
+                            </p>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/XTUXRMNSX0SB"
+                                class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Certificate 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/slasscom.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Science and Machine Learning - Bootcamp</h5>
+                            <p class="card-text" align="justify">
+                                SLASSCOM Academy
+                            </p>
+                            <a href="https://mycourse.app/7UvPze7LLfK17F8t5" class="btn btn-secondary">View
+                                Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/datathon.jpeg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Datathon Contest - CODEFEST 2023 (2nd Runner-Up)</h5>
+                            <p class="card-text" align="justify">
+                                Sri Lanka Institute of Information Technology
+                            </p>
+                            <a href="#" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/DigiM.jpeg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Fundamentals in Digital Marketing</h5>
+                            <p class="card-text" align="justify">
+                                Asia Pacific Institute of Digital Marketing (APIDM)
+                            </p>
+                            <a href="#" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Certificate 7 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/aiml1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">AI/ML Engineer - Stage 1</h5>
+                            <p class="card-text" align="justify">
+                                Sri Lanka Institute of Information Technology
+                            </p>
+                            <a href="https://code.sliit.org/certificates/u6i1kb5ngk" class="btn btn-secondary">View
+                                Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 8 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/aiml2.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">AI/ML Engineer - Stage 2</h5>
+                            <p class="card-text" align="justify">
+                                Sri Lanka Institute of Information Technology
+                            </p>
+                            <a href="https://code.sliit.org/certificates/cmkakda9cs" class="btn btn-secondary">View
+                                Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 9 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/hacerrank.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Skill Certificate - Python (Basic)</h5>
+                            <p class="card-text" align="justify">
+                                HackerRank
+                            </p>
+                            <a href="https://www.hackerrank.com/certificates/e028f3865d91"
+                                class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+            <div class="row">
+                <!-- Certificate 10 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/uom.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Python Programming - CODL</h5>
+                            <p class="card-text" align="justify">
+                                University of Moratuwa<br>
+                                Credential ID: Wy20zjaa5Z
+                            </p>
+                            <a href="https://open.uom.lk/verify" class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 11 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/google1.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">'Introduction to Generative AI' Badge</h5>
+                            <p class="card-text" align="justify">
+                                Google Cloud Skills Boost
+                            </p>
+                            <a href="https://www.cloudskillsboost.google/public_profiles/2f32922b-171b-4833-b3e4-05f0f525b0ba/badges/9484060?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+                                class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate 12 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/certificates/google2.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">'Introduction to Large Language Models' Badge</h5>
+                            <p class="card-text" align="justify">
+                                Google Cloud Skills Boost
+                            </p>
+                            <a href="https://www.cloudskillsboost.google/public_profiles/2f32922b-171b-4833-b3e4-05f0f525b0ba/badges/9484526?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+                                class="btn btn-secondary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section bg-white" id="skills">
-  <div class="container">
-    <h2 class="text-center">Skills</h2>
-    <div class="row">
-      <!-- Skill 1 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/1.png" class="card-img-top" alt="Python">
-          <div class="card-body">
-            <h5 class="card-title">Python</h5>
-          </div>
+    <section id="skills" class="skills-section bg-light">
+        <div class="container">
+            <h2 class="text-center">Skills</h2>
+            <div class="row">
+                <!-- Skill 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="images/skills/1.png" class="card-img-top" alt="Python">
+                        <div class="card-body">
+                            <h5 class="card-title">Python</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Visualization</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+                        <div class="card-body">
+                            <h5 class="card-title">SQL</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="images/skills/R.jpeg" class="card-img-top" alt="Data Storytelling">
+                        <div class="card-body">
+                            <h5 class="card-title">R</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Skill 5 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="images/skills/powerbi.avif" class="card-img-top" alt="Python">
+                        <div class="card-body">
+                            <h5 class="card-title">Power BI</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- Skill 2 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
-          <div class="card-body">
-            <h5 class="card-title">Data Visualization</h5>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 3 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
-          <div class="card-body">
-            <h5 class="card-title">SQL</h5>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 4 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/R.jpeg" class="card-img-top" alt="Data Storytelling">
-          <div class="card-body">
-            <h5 class="card-title">R</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Skill 5 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/powerbi.avif" class="card-img-top" alt="Python">
-          <div class="card-body">
-            <h5 class="card-title">Power BI</h5>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 6 -->
-      <!-- <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
-          <div class="card-body">
-            <h5 class="card-title">Data Visualization</h5>
-          </div>
-        </div>
-      </div> -->
-      <!-- Skill 7 -->
-      <!-- <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
-          <div class="card-body">
-            <h5 class="card-title">SQL</h5>
-          </div>
-        </div>
-      </div> -->
-      <!-- Skill 8 -->
-      <!-- <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
-          <div class="card-body">
-            <h5 class="card-title">Data Storytelling</h5>
-          </div>
-        </div>
-      </div> -->
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Contact Me Section -->
-<section id="contact" class="contact-section text-center text-white bg-dark py-5">
-  <div class="container">
-    <h2 class="mb-4">Get In Touch</h2>
-    <p class="mb-4">I'm always open to new opportunities, collaborations, and feedback! Feel free to reach out via email, phone, or through my social media profiles.</p>
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-4 mb-4">
-        <a href="mailto:kavindu.kasthu@gmail.com" class="contact-link d-block p-3 bg-light text-dark rounded shadow-sm">
-          <i class="fas fa-envelope fa-2x mb-2"></i>
-          Email
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4">
-        <a href="tel:+94712004992" class="contact-link d-block p-3 bg-light text-dark rounded shadow-sm">
-          <i class="fas fa-phone fa-2x mb-2"></i>
-          Call Me
-        </a>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-4 col-lg-2 mb-4">
-        <a href="https://www.linkedin.com/in/kavindu-kasthurirathne" target="_blank" class="social-link d-block p-3 bg-primary text-white rounded shadow-sm">
-          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon mb-2">
-          LinkedIn
-        </a>
-      </div>
-      <div class="col-md-4 col-lg-2 mb-4">
-        <a href="https://github.com/KavinduKasthurirathne" target="_blank" class="social-link d-block p-3 bg-dark text-white rounded shadow-sm">
-          <img src="icons/github.png" alt="GitHub" class="social-icon mb-2">
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Sticky Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#home">Kavindu Kasthurirathne</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#certificates">Certificates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="mb-4">Get In Touch</h2>
+            <p class="mb-4">I'm always open to new opportunities, collaborations, and feedback! Feel free to reach out
+                via email, phone, or through my social media profiles.</p>
+            <div class="row justify-content-left">
+                <div class="col-md-4 col-lg-2 mb-2">
+                    <a href="mailto:kavindu.kasthu@gmail.com"
+                        class="contact-link">
+                        <i class="fas fa-envelope fa-2x mb-2"></i>
+                        Email
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-2 mb-2">
+                    <a href="tel:+94712004992" class="contact-link">
+                        <i class="fas fa-phone fa-2x mb-2"></i>
+                        Call Me
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-left">
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <a href="https://www.linkedin.com/in/kavindu-kasthurirathne" target="_blank"
+                        class="social-link">
+                        <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+                        LinkedIn
+                    </a>
+                </div>
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <a href="https://github.com/KavinduKasthurirathne" target="_blank"
+                        class="social-link">
+                        <img src="icons/github.png" alt="GitHub" class="social-icon">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+
 </body>
+
 </html>
