@@ -7,7 +7,6 @@ Professional portfolio website showcasing projects, skills, certifications, and 
 
 ![Portfolio Preview](images/About.png)
 ![Portfolio Preview1](images/Projects.png)
-![Portfolio Preview2](images/Certificates.png)
 
 
 ## Features
